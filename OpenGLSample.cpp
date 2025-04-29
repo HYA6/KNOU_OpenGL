@@ -1,3 +1,31 @@
+/*
+작성 시작일: 2025년 4월 21일 (최종수정: 250429)
+
+**실행 전 파일 설정하기**
+
+1) freeglut와 glew를 설치 - 두 dll 파일을 MS윈도우의 시스템 디렉터리에 복사
+    C:\OpenGL\freeglut\bin\x64\freeglut.dll
+    C:\OpenGL\glew-2.1.0\bin\Release\x64\glew32.dll
+    --> C:\Windows\System32 디렉터리에 복사
+
+    C:\OpenGL\glew-2.1.0\bin\Release\Win32\glew32.dll
+    C:\OpenGL\freeglut\bin\freeglut.dll
+    --> C:\Windows\SysWOW64 디렉터리에 복사
+
+
+2) freeglut와 glew를 사용할 수 있도록 프로젝트의 속성을 설정
+    - freeglut와 glew의 라이브러리가 있는 디렉터리 설정
+        프로젝트 설정 -> [VC++ 디렉터리] -> [라이브러리 디렉터리]
+        c:\OpenGL\freeglut\lib (x64 버전이면 c:\OpenGL\freeglut\lib\x64)
+        c:\OpenGL\glew-2.1.0\lib\Release\Win32 (x64 버전이면 c:\OpenGL\glew-2.1.0\lib\Release\x64)
+        추가
+    
+    - freeglut와 glew 헤더파일을 사용할 수 있도록 설정
+        프로젝트 설정 -> [링커] -> [입력] -> [추가 종속성]
+        freeglut.lib
+        glew32.lib
+        입력
+*/
 #include  <stdio.h>
 
 #include  <gl/glew.h>
